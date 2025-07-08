@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Borrowed Salsa</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/logo.jpeg" alt="Borrowed Salsa Logo" class="logo"/>
+        <h1>Borrowed Salsa</h1>
+        <p>Because nothing says "authentic" like a recipe stolen. Twice.</p>
+        <a href="#order" class="cta">Taste the Theft</a>
+    </header>
+
+    <section id="about">
+        <h2>The Origin Story (We'd Lie, But Why?)</h2>
+        <p>This salsa? It’s technically a crime of flavor. Picture this: stealing a coworker’s abuela’s prized recipe after a potluck, strictly in the name of culinary justice. Methodically refined thanks to my father-in-law’s rocket science credentials. Bottled. Bold. Questionably legal.</p>
+    </section>
+
+    <section id="timeline">
+        <h2>Criminal Timeline</h2>
+        <ul>
+            <li><strong>1980ish:</strong> Office potluck. No witnesses.</li>
+            <li><strong>2024:</strong> A suspicious visit to the in-laws' pantry.</li>
+            <li><strong>Now:</strong> Available online. Capitalism wins again.</li>
+        </ul>
+    </section>
+
+    <section id="products">
+        <h2>The Lineup</h2>
+        <div class="product-card">
+            <h3>Original Sin</h3>
+            <p>Our flagship salsa — smoky, medium heat, and 100% questionably acquired.</p>
+            <span>$8 / jar</span>
+        </div>
+        <div id="paypal-container-D8A2VNAMMQJRJ"></div>
+        <script 
+            src="https://www.paypal.com/sdk/js?client-id=BAAfZhF7p0POeE-c4cttrhhS0nB7mZJMaevLIdFGuDssGg117W6LpL4qCefriA3eDBMBS4uro1_Oigp-rg&components=hosted-buttons&enable-funding=venmo&currency=USD">
+        </script>
+        <script>
+            paypal.HostedButtons({
+                hostedButtonId: "D8A2VNAMMQJRJ",
+            }).render("#paypal-container-D8A2VNAMMQJRJ");
+        </script>
+        <img src="images/qr_code.png" alt="PayPal QR Code" class="qr-code">
+    </section>
+
+    <section id="order">
+        <h2>Place Your Order (Local Pickup Only)</h2>
+        <form action="https://formspree.io/f/meokbalo" method="POST" onsubmit="return showConfirmation();">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="quantity">How many jars?</label>
+            <input type="number" id="quantity" name="quantity" min="1" required />
+
+            <label for="pickup">Preferred Pickup Time:</label>
+            <input type="text" id="pickup" name="pickup" />
+
+            <button type="submit">Submit Order</button>
+        </form>
+        <p id="confirmation-message" class="hidden">Thanks! We'll email you back with pick-up info. 🕵️‍♀️</p>
+    </section>
+
+    <footer>
+        <p>"That’s Capitalism, Baby." — Us, proudly</p>
+        <small>&copy; 2025 Borrowed Salsa. All thefts justified.</small>
+    </footer>
+
+    <script>
+        function showConfirmation() {
+            document.getElementById('confirmation-message').classList.remove('hidden');
+            return true;
+        }
+    </script>
+</body>
+</html>
