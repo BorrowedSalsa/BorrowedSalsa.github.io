@@ -11,18 +11,28 @@
 <body>
   <header class="banner">
     <h1>🔥 Borrowed Salsa 🔥</h1>
-<nav class="main-nav">
-  <a href="#order">Order</a>
-  <a href="fake-legal.html">Legal Team</a>
-  <a href="cease-bingo.html">Bingo</a>
-</nav>
-
-    <p class="tagline">So good, it’s almost legal.</p>
+    <nav class="main-nav">
+      <a href="#order">🛒 Order</a>
+      <a href="fake-legal.html">⚖️ Legal Team</a>
+      <a href="cease-bingo.html">🎯 Bingo</a>
+      <a href="salsadark.html">🕵️ Secret</a>
+    </nav>
+    <p class="tagline"> Because nothing says "Authentic" like a recipe stolen. Twice.</p>
   </header>
 
   <section id="about">
-    <h2>💥 The Origin Story</h2>
-    <p>This salsa? It’s technically a flavor felony. A coworker’s abuela. A father-in-law's pantry. A theft refined over years. And now? Yours — for a small fee and a slight moral compromise.</p>
+    <h2>💥 The Origin Story (We'd Lie, But Why?) </h2>
+    <p>This salsa? It’s technically a flavor felony. Picture this: imagine stealing a coworker’s abuela’s prized recipe after a potluck, strictly in the name of culinary justice. Methodically refined courtesy of my father-in-law’s innate training at Texas A&M who believes if you can launch rockets, you can launch heat. Bottled, Bold, Questionably legal.</p>
+  </section>
+
+  <section id="timeline">
+    <h2>Criminal Timeline</h2>
+    <ul>
+      <li><strong>1980ish:</strong> Office potluck. No witnesses.</li>
+      <li><strong>2024:</strong> A suspicious visit to the in-laws' pantry.</li>
+      <li><strong>Now:</strong> Available online. Capitalism wins again.</li>
+    </ul>
+    <p>A coworker’s abuela. A father-in-law's pantry. A theft refined over years. And now? Yours — for a small fee and a slight moral compromise.</p>
   </section>
 
   <section id="products">
@@ -34,11 +44,11 @@
     </div>
   </section>
 
-  <section id="order">
+  <section id="order" class="order-section">
     <h2>🚨 Place Your Order</h2>
-    <p>Local pickup only. Please pay after submitting the form or use PayPal below. We'll email you with pickup instructions.</p>
+    <p>Local pickup only. Submit the form or use PayPal below. We'll email you with pickup instructions.</p>
 
-    <form action="https://formspree.io/f/meokbalo" method="POST">
+    <form action="https://formspree.io/f/meokbalo" method="POST" class="centered-form">
       <label for="name">Your Name</label>
       <input type="text" name="name" id="name" required>
 
@@ -48,34 +58,40 @@
       <label for="quantity">How many jars?</label>
       <input type="number" name="quantity" id="quantity" min="1" required>
 
-      <label for="pickup">Preferred Pickup Time</label>
+      <label for="pickup">Preferred Pickup Date and Time</label>
       <input type="text" name="pickup" id="pickup">
 
       <input type="hidden" name="_redirect" value="thankyou.html">
-      <button type="submit" class="cta-button">Taste the Theft</button>
+      <button type="submit" class="cta-button">Thievery Tastes Good</button>
     </form>
 
-    <p class="paypal-note">
-      <strong>Step 2:</strong> Pay via PayPal → Include your name, quantity & pickup time in the notes.
+    <p class="paypal-note centered-text">
+      <strong>Or:</strong> Pay via 💸 PayPal → Include your name, quantity & pickup time in the notes.
     </p>
-    <a href="https://paypal.me/borrowedsalsa/8" class="paypal-button" target="_blank">💸 Pay with PayPal</a>
-    <img src="images/qr_code.png" alt="PayPal QR Code" class="qr-code">
-    <p style="text-align:center; margin-top:2rem; font-style:italic;">
-    Still confused? Yeah, me too! Email us at <a href="mailto:info@borrowedsalsa.com">info@borrowedsalsa.com</a><br>
-    We’ll pretend to know what we’re doing.
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAfZhF7p0POeE-c4cttrhhS0nB7mZJMaevLIdFGuDssGg117W6LpL4qCefriA3eDBMBS4uro1_Oigp-rg&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+    <div class="paypal-container" id="paypal-container-D8A2VNAMMQJRJ"></div>
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "D8A2VNAMMQJRJ",
+      }).render("#paypal-container-D8A2VNAMMQJRJ")
+    </script>
+
+    <p class="centered-text" style="margin-top: 2rem;">
+      Still confused? Yeah, me too! Email us at <a href="mailto:info@borrowedsalsa.com">info@borrowedsalsa.com</a><br>
+      We’ll pretend to know what we’re doing.
     </p>
   </section>
 
   <footer>
     <p>"That’s Capitalism, Baby." — Us, proudly</p>
     <small>&copy; 2025 Borrowed Salsa</small>
-  <p class="contact-snark">Questions, compliments, or legal threats?<br>
+    <p class="contact-snark">Questions, compliments, or legal threats?<br>
     Email us: <a href="mailto:info@borrowedsalsa.com">info@borrowedsalsa.com</a></p>
-<p class="legal-disclaimer">
-  <strong>Disclaimer:</strong> While our salsa is hot, our legal standing is lukewarm at best.
-  Any resemblance to stolen recipes — living or dead — is purely intentional.
-  By purchasing, you agree not to sue, snitch, or send cease-and-desists.
-</p>
-</footer>
+    <p class="legal-disclaimer">
+      <strong>Disclaimer:</strong> While our salsa is hot, our legal standing is lukewarm at best.
+      Any resemblance to stolen recipes — living or dead — is purely intentional.
+      By purchasing, you agree not to sue, snitch, or send cease-and-desists.
+    </p>
+  </footer>
 </body>
 </html>
